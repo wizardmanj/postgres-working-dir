@@ -25,4 +25,6 @@ knex('famous_people')
     knex.destroy();
 });
 
+knex.select().from('milestones').then(a => console.log('==>',a))
+
 
