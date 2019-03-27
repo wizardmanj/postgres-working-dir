@@ -1,7 +1,7 @@
 
 exports.up = function(knex, Promise) {
 
-    knex.schema.createTable('milestones', function (t) {
+    return knex.schema.createTable('milestones', function (t) {
         t.increments('id').primary();
         t.string('description', 512);
         t.date('date_achieved');
@@ -9,5 +9,5 @@ exports.up = function(knex, Promise) {
 };
 
 exports.down = function(knex, Promise) {
-    knex.schema.dropTableIfExists('milestones');
+    return knex.schema.dropTableIfExists('milestones');
 };
