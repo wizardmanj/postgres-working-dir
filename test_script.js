@@ -30,7 +30,7 @@ client.connect(err => {
     console.log(`Connection error ${err.stack}`);
   } else {
     console.log(`Connected to ${client.database} database!`);
-    const [node, path, userInput] = process.argv;
+    const [, , userInput] = process.argv;
     
     findFamousPerson(userInput);
   }
